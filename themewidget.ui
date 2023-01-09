@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ThemeWidgetForm</class>
+ <widget class="QWidget" name="ThemeWidgetForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1206</width>
+    <height>588</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string/>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="3">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="btnConnect">
+       <property name="text">
+        <string>CONNECT</string>
+       </property>
+       <property name="icon">
+        <iconset resource="C:/Users/HopeMan/source/repos/test/QtWidgetsApplication1/mainWindow.qrc">
+         <normaloff>:/mainWindow/D:/WORKSPACE/chartthemes/debug/rcc/connect.jpg</normaloff>:/mainWindow/D:/WORKSPACE/chartthemes/debug/rcc/connect.jpg</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnDisconnect">
+       <property name="text">
+        <string>DISCONNECT</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnSETTING">
+       <property name="text">
+        <string>SETTING</string>
+       </property>
+       <property name="icon">
+        <iconset resource="C:/Users/HopeMan/source/repos/test/QtWidgetsApplication1/mainWindow.qrc">
+         <normaloff>:/mainWindow/D:/WORKSPACE/chartthemes/debug/rcc/setting.png</normaloff>:/mainWindow/D:/WORKSPACE/chartthemes/debug/rcc/setting.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="themeLabel">
+       <property name="text">
+        <string>Theme:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="themeComboBox"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="animatedLabel">
+       <property name="text">
+        <string>Animation:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="animatedComboBox"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="legendLabel">
+       <property name="text">
+        <string>Legend:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="legendComboBox"/>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="C:/Users/HopeMan/source/repos/test/QtWidgetsApplication1/mainWindow.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>themeComboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>ThemeWidgetForm</receiver>
+   <slot>updateUI()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>legendComboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>ThemeWidgetForm</receiver>
+   <slot>updateUI()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>animatedComboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>ThemeWidgetForm</receiver>
+   <slot>updateUI()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>updateUI()</slot>
+ </slots>
+</ui>
